@@ -127,8 +127,8 @@ function RESET(){
 }
 
 function UNDO(){
-  if(lastMil.length > 0) {
-    MIL = lastMil.pop();
+  if(lastMIL.length > 0) {
+    MIL = lastMIL.pop();
     ECO = lastECO.pop();
     SS = lastSS.pop();
     HRF = lastHRF.pop();
