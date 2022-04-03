@@ -1,36 +1,64 @@
-#mainMenu{
+body{
+  background-color: #222;
+}
 
+#mainMenu{
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #444;
+}
+
+li{
+  float: left;
+}
+li a {
+  display: block;
+  padding: 12px 12px;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffac1c;
+  border-right: 1px solid #333;
+}
+li a:active {
+  background-color: #b87333;
 }
 #bottom{
-
+  background-color: #ff0000;
 }
 #milMain{
 
+  background-color: lightgreen;
 }
 #mil{
 
 }
 #ecoMain{
-
+  background-color: yellow;
 }
 #eco{
 
 }
 #ssMain{
+  background-color: lightgrey;
+}
+#ss{
 
 }
 #hrfMain{
-
+  background-color: lightblue;
 }
 #hrf{
 
 }
 
 .stat{
-  
+
 }
 .titles{
-
+  font-family: sans-serif;
 }
 .statNum{
 
