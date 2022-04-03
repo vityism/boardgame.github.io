@@ -1,6 +1,15 @@
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
 body{
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_the_United_Nations.svg/1200px-Flag_of_the_United_Nations.svg.png");
   background-position: center;
+}
+@media screen and (max-width: 480px){
+  body{
+    width: 480px;
+  }
 }
 ul{
   list-style-type: none;
