@@ -3,10 +3,10 @@ var ECO = 30;
 var SS = 30;
 var HRF = 30;
 
-var lastMIL;
-var lastECO;
-var lastSS;
-var lastHRF;
+var lastMIL = new Array();
+var lastECO = new Array();
+var lastSS = new Array();
+var lastHRF = new Array();
 
 function lMil5(){
   record();
@@ -104,10 +104,10 @@ function uHrf5(){
 
 
 function record(){
-  lastMIL = MIL;
-  lastECO = ECO;
-  lastSS = SS;
-  lastHRF = HRF;
+  lastMIL.push(MIL);
+  lastECO.push(ECO);
+  lastSS.push(SS);
+  lastHRF.push(HRF);
 }
 
 function printAll(){
@@ -127,10 +127,14 @@ function RESET(){
 }
 
 function UNDO(){
-  MIL = lastMIL;
-  ECO = lastECO;
-  SS = lastSS;
-  HRF = lastHRF;
-  record();
+  if(lastMil.length <= 0) return;
+  MIL = lastMIL[lastMil.length - 1];
+  ECO = lastECO[lastECO.length - 1];
+  SS = lastSS[lastSS.length - 1];
+  HRF = lastHRF[lastHRF.length - 1];
+  lastMil.splice(lastMil.length - 1, 1);
+  lastECO.splice(lastECO.length - 1, 1);
+  lastSS.splice(lastSS.length - 1, 1);
+  lastHRF.splice(lastHRF.length - 1, 1);
   printAll();
 }
