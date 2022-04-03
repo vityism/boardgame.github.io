@@ -134,8 +134,4 @@ function UNDO(){
     HRF = lastHRF.pop();
     printAll();
   }
-  else {
-    MIL = 105;
-    printAll();
-  } 
 }
