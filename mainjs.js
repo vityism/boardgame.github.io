@@ -3,10 +3,10 @@ var ECO = 30;
 var SS = 30;
 var HRF = 30;
 
-var lastMIL = new Array();
-var lastECO = new Array();
-var lastSS = new Array();
-var lastHRF = new Array();
+var lastMIL = [];
+var lastECO = [];
+var lastSS = [];
+var lastHRF = [];
 
 function lMil5(){
   record();
