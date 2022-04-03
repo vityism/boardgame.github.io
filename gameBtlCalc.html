@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Race to Human Rights Boardgame Calculator</title>
+  <link rel="stylesheet" type="text/css" href="maincss.css">
+
+<style>
+#results{
+
+}
+</style>
+
+</head>
+
 <body>
-  <div id="mainMenu">
+
+  <script src="calc.js">
+  </script>
+
+  <nav id="mainMenu">
     <a href="index.html">HOME</a>
     <a href="gameBtlCalc.html">BATTLE CALCULATOR</a>
-  </div>
+  </nav>
 
-<p>Fill the form and press submit to use the calculator</p>
+<h3>Fill the form and press submit to use the calculator</h3>
 
 <form id="inputs" action="/action_page.php">
   number of attacking troops: <input type="number" name="att"><br><br>
@@ -14,99 +30,7 @@
   <input type="button" onclick="main(att, def)" value="Submit">
 </form>
 
-<script>
-function diceRoll(){
-    var roll = Math.ceil(6*Math.random());
-    return roll;
-}
-
-function compare(a1, a2, d1, d2){
-    if(a1<=d1){
-        if(a1<=d2){
-            attNum -= 2;
-        }
-        else{
-            attNum --;
-            defNum --;
-        }
-    }else{
-        if(a2>d1){
-            defNum -= 2;
-        }
-        else{
-            attNum --;
-            defNum --;
-        }
-    }
-}
-
-function battle(){
-
-    attDice.sort(function(a, b){return b-a});
-    defDice.sort(function(a, b){return b-a});
-
-    compare(attDice[0], attDice[1], defDice[0], defDice[1]);
-//    console.log("a " + attNum);
- //   console.log("d " + defNum);
-
-}
-
-function finish(){
-    if (defNum>=attNum+8){
-        attNum=0;
-    } else if (attNum>=defNum+9){
-        defNum=0;
-    } else{
-        if (Math.random()>0.5){
-            attNum -- ;
-        }else defNum --;
-    }
-}
-
-function declare(){
-    if(defNum <= 0){
-        alert("attacker wins. Returning Troops: " + Math.floor(attNum/2));
-//        wins ++;
-    }
-    if (attNum<=0){
-        alert("defender wins. Returning Troops: " + defNum);
-//        losses ++;
-    }
-}
-
-function main(ATT, DEF){
-//while (repeat<100){
-attNum = ATT.value;
-defNum = DEF.value;
-
-while(attNum > 2 && defNum > 1){
-    attDice = [diceRoll(), diceRoll(), diceRoll()];
-    defDice = [diceRoll(), diceRoll()];
-    battle();
-}
-while(attNum>0 && defNum>0){
-    finish();
-}
-
-declare();
-/*
-repeat ++;
-}
-//console.log(wins);
-console.log(losses);
-*/
-}
-
-var attNum = 0;
-var defNum= 0;
-var attDice = [0, 0, 0];
-var defDice = [0, 0];
-
-//var repeat = 0;
-//var wins = 0;
-//var losses = 0;
-
-</script>
+<br><br><br><h3 id="results"></h3>
 
 </body>
 </html>
