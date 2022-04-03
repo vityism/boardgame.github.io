@@ -11,10 +11,10 @@
 
 <body>
 
-  <div id="mainMenu">
-    <a href="index.html">HOME</a>
-    <a href="gameBtlCalc.html">BATTLE CALCULATOR</a>
-  </div>
+  <nav><ul id="mainMenu">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="gameBtlCalc.html">BATTLE CALCULATOR</a></li></ul>
+  </nav>
 
   <div id="milMain" class="stat">
     <h3 class="titles">Military Strength:</h3>
@@ -22,8 +22,8 @@
     <button class="lo" type="button" onclick="lMil1()">-1</button>
     <div id="mil"><p id="milNum" class="statNum">30</p></div>
     <button class="uo" type="button" onclick="uMil1()">+1</button>
-    <button class="uf" type="button" onclick="uMil5()">+5</button>
-  </div><br><br>
+    <button class="uf" type="button" onclick="uMil5()">+5</button><br><br>
+  </div>
 
   <div id="ecoMain" class="stat">
     <h3 class="titles">Economic Power:</h3>
@@ -31,8 +31,8 @@
     <button class="lo" type="button" onclick="lEco1()">-1</button>
       <div id="eco"><p id="ecoNum" class="statNum">30</p></div>
     <button class="uo" type="button" onclick="uEco1()">+1</button>
-    <button class="uf" type="button" onclick="uEco5()">+5</button>
-  </div><br><br>
+    <button class="uf" type="button" onclick="uEco5()">+5</button><br><br>
+  </div>
 
   <div id="ssMain" class="stat">
     <h3 class="titles">Social Stability:</h3>
@@ -40,15 +40,15 @@
     <button class="lo" type="button" onclick="lSs1()">-1</button>
       <div id="ss"><p id="ssNum" class="statNum">30</p></div>
     <button class="uo" type="button" onclick="uSs1()">+1</button>
-    <button class="uf" type="button" onclick="uSs5()">+5</button>
-  </div><br><br>
+    <button class="uf" type="button" onclick="uSs5()">+5</button><br><br>
+  </div>
 
   <div id="hrfMain" class="stat">
     <h3 class="titles">Human Rights Factor:</h3>
     <button class="lf" type="button" onclick="lHrf5()">-5</button>
       <div id="hrf"><p id="hrfNum">30</p></div>
-    <button class="uf" type="button" onclick="uHrf5()">+5</button>
-  </div><br><br>
+    <button class="uf" type="button" onclick="uHrf5()">+5</button><br><br>
+  </div><br>
 
   <div id="bottom">
     <button class="misc" type="button" onclick="UNDO()">UNDO last change</button>
