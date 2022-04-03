@@ -127,14 +127,15 @@ function RESET(){
 }
 
 function UNDO(){
-  if(lastMil.length <= 0) {
-    MIL = 105; 
-    printall(); 
-    return;
+  if(lastMil.length > 0) {
+    MIL = lastMil.pop();
+    ECO = lastECO.pop();
+    SS = lastSS.pop();
+    HRF = lastHRF.pop();
+    printAll();
   }
-  MIL = lastMil.pop();
-  ECO = lastECO.pop();
-  SS = lastSS.pop();
-  HRF = lastHRF.pop();
-  printAll();
+  else {
+    MIL = 105;
+    printAll();
+  } 
 }
