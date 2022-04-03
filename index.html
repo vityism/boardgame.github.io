@@ -2,51 +2,59 @@
 <html>
 <head>
   <title>Race to Human Rights Boardgame Website</title>
+  <link rel="stylesheet" type="text/css" href="maincss.css">
 
-  <script>
-
+  <script src="mainjs.js">
   </script>
+
 </head>
 
 <body>
+
   <div id="mainMenu">
     <a href="index.html">HOME</a>
     <a href="gameBtlCalc.html">BATTLE CALCULATOR</a>
   </div>
 
   <div id="milMain" class="stat">
-    <h3 class="titles">Military Strength:</h3><br>
-    <button class="lf" type="button" onclick="l5mil()">-5</button>
-    <button class="lo" type="button" onclick="l1mil()">-1</button>
-    <div id="mil"><p id="milNum">30</p></div>
-    <button class="uo" type="button" onclick="u1mil()">+1</button>
-    <button class="uf" type="button" onclick="u5mil()">+5</button>
+    <h3 class="titles">Military Strength:</h3>
+    <button class="lf" type="button" onclick="lMil5()">-5</button>
+    <button class="lo" type="button" onclick="lMil1()">-1</button>
+    <div id="mil"><p id="milNum" class="statNum">30</p></div>
+    <button class="uo" type="button" onclick="uMil1()">+1</button>
+    <button class="uf" type="button" onclick="uMil5()">+5</button>
   </div><br><br>
 
   <div id="ecoMain" class="stat">
-    <h3 class="titles">Economic Power:</h3><br>
-    <button class="lf" type="button" onclick="l5eco()">-5</button>
-    <button class="lo" type="button" onclick="l1eco()">-1</button>
-      <div id="eco"><p id="ecoNum">30</p></div>
-    <button class="uo" type="button" onclick="u1eco()">+1</button>
-    <button class="uf" type="button" onclick="u5eco()">+5</button>
+    <h3 class="titles">Economic Power:</h3>
+    <button class="lf" type="button" onclick="lEco5()">-5</button>
+    <button class="lo" type="button" onclick="lEco1()">-1</button>
+      <div id="eco"><p id="ecoNum" class="statNum">30</p></div>
+    <button class="uo" type="button" onclick="uEco1()">+1</button>
+    <button class="uf" type="button" onclick="uEco5()">+5</button>
   </div><br><br>
 
   <div id="ssMain" class="stat">
-    <h3 class="titles">Social Stability:</h3><br>
-    <button class="lf" type="button" onclick="l5ss()">-5</button>
-    <button class="lo" type="button" onclick="l1ss()">-1</button>
-      <div id="ss"><p id="ssNum">30</p></div>
-    <button class="uo" type="button" onclick="u1ss()">+1</button>
-    <button class="uf" type="button" onclick="u5ss()">+5</button>
+    <h3 class="titles">Social Stability:</h3>
+    <button class="lf" type="button" onclick="lSs5()">-5</button>
+    <button class="lo" type="button" onclick="lSs1()">-1</button>
+      <div id="ss"><p id="ssNum" class="statNum">30</p></div>
+    <button class="uo" type="button" onclick="uSs1()">+1</button>
+    <button class="uf" type="button" onclick="uSs5()">+5</button>
   </div><br><br>
 
   <div id="hrfMain" class="stat">
-    <h3 class="titles">Human Rights Factor:</h3><br>
-    <button class="lf" type="button" onclick="l5hrf()">-5</button>
+    <h3 class="titles">Human Rights Factor:</h3>
+    <button class="lf" type="button" onclick="lHrf5()">-5</button>
       <div id="hrf"><p id="hrfNum">30</p></div>
-    <button class="uf" type="button" onclick="l5hrf()">+5</button>
+    <button class="uf" type="button" onclick="uHrf5()">+5</button>
   </div><br><br>
+
+  <div id="bottom">
+    <button class="misc" type="button" onclick="UNDO()">UNDO last change</button>
+    <br><br><br><br>
+    <button class="misc" type="button" onclick="RESET()">RESET to start</button>
+  </div>
 
 </body>
 </html>
