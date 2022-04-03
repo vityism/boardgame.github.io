@@ -132,9 +132,9 @@ function UNDO(){
   ECO = lastECO[lastECO.length - 1];
   SS = lastSS[lastSS.length - 1];
   HRF = lastHRF[lastHRF.length - 1];
-  lastMil.splice(lastMil.length - 1, 1);
-  lastECO.splice(lastECO.length - 1, 1);
-  lastSS.splice(lastSS.length - 1, 1);
-  lastHRF.splice(lastHRF.length - 1, 1);
+  lastMil.pop();
+  lastECO.pop();
+  lastSS.pop();
+  lastHRF.pop();
   printAll();
 }
