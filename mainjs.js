@@ -81,7 +81,6 @@ function uMil5(){
   record();
   MIL += 5;
   if (MIL>100)MIL=100;
-  console.log(MIL);
   document.getElementById("milNum").innerHTML = MIL;
 }
 function uEco5(){
