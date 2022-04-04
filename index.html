@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Race to Human Rights Boardgame Website</title>
   <link rel="stylesheet" type="text/css" href="maincss.css">
 
@@ -11,7 +12,7 @@
 </head>
 
 <body>
-  <h2 style="color:white; font-family:sans-serif;">The battle calcuator is at the bottom of the page. The statistics are below. Use the buttons to change their values.</h3>
+  <h2 style="color:white; font-size: 3vw; background-color: #222; font-family:sans-serif;">The battle calcuator is at the bottom of the page. The statistics are below. Use the buttons to change their values.</h3>
   <br>
 
   <div id="milMain" class="stat">
@@ -59,7 +60,7 @@
     <form id="inputs" action="/action_page.php">
       Number of attacking troops: <input type="number" name="att"><br><br>
       Number of defending troops: <input type="number" name="def"><br><br>
-      <input onclick="main(att, def)" type="button" value="BATTLE">
+      <button onclick="main(att, def)" style="font-size: 3vw">BATTLE</button>
     </form>
 
     <br><br><h3 id="results" style="color:#dddd00">results appear here</h3><br>
