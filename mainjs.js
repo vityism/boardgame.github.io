@@ -59,7 +59,7 @@ function lSs1(){
 function uMil1(){
   record();
   MIL += 1;
-  if (MIL>100)MiL=100;
+  if (MIL>100)MIL=100;
   document.getElementById("milNum").innerHTML = MIL;
 }
 function uEco1(){
@@ -80,7 +80,7 @@ function uSs1(){
 function uMil5(){
   record();
   MIL += 5;
-  if (MIL>100)MiL=100;
+  if (MIL>100)MIL=100;
   document.getElementById("milNum").innerHTML = MIL;
 }
 function uEco5(){
